@@ -81,5 +81,7 @@ bool primiSMTP() {
 	}
 	else return false;
 
+	closesocket(listenSock);
+	WSACleanup();
 	return true;
 }
