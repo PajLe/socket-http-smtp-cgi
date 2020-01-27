@@ -53,7 +53,7 @@ bool primiSMTP() {
 				recv(acceptSock, recv_data, KB, 0);
 
 				if (strstr(recv_data, "DATA") != NULL) {
-					strcpy(send_data, "324 Enter mail, end with \".\" on a line by itself ");
+					strcpy(send_data, "354 Enter mail, end with \".\" on a line by itself ");
 
 					send(acceptSock, send_data, strlen(send_data) + 1, 0);
 					recv(acceptSock, recv_data, KB, 0);
